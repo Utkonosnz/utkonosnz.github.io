@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<script type = 'text/javascript'>
+//document.write('test');
+
+function hide(id){
+  var elt = document.getElementById(id);
+  elt.style.display = (elt.style.display === 'none') ? 'block' : 'none';
+  console.log("toggled " + id);
+};
+
+</script>
+
+<style>
+
+div.table-name {
+  background-color: #195905;
+  color: white;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  font-family: arial;
+  
+}
+
+div.option {
+  background-color: #5AAB61;
+  border: 0px;
+  color: white;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  font-family: arial;
+  
+}
+
+div.o {
+  background-color: #8ABAAE;
+  border: 0px;
+  color: white;
+  margin: 1px;
+  padding: 3px 3px 3px 3px;
+  cursor: pointer;
+  font-family: arial;
+  
+}
+
+body {
+	font-family: arial;
+	}
+</style>
+
+</head>
+
+<body>
+<center><h1>The Ballad of Robin Hood</h1></center>
+<p>An entry in the <a href="https://boardgamegeek.com/thread/2875719/2022-solitaire-print-and-play-contest">2022 Solitaire Print and Play Contest</a>
+run by Ben Moryata.</p>
+<p>You can now play <i>The Ballad of Robin Hood</i> online (more or less). The game is set up on PCIO at <a href="https://playingcards.io/j6hhzb">this link.</a> Double-click on the die
+whenever you need to roll it.
+</p>
+<h2>Basic Rules</h2>
+<p>The game takes place over 28 days. At the start of each day, roll on the Weather Table to determine the weather. Then, you have 3 action points (AP) to spend.
+Each action generally takes 1 AP unless otherwise noted. The possible actions are:
+<ul>
+<li><p>Move: move Robin and any other outlaws you wish from Robin's current hex to a neighbouring hex. For each outlaw moved, spend 1 FOOD
+or lose 1 hit point (HP). If you have as many HORSES as outlaws moved, you may instead move two hexes away. After moving, if you entered a
+Field or Forest hex, roll on the corresponding Encounter Table.</p>
+<li><p>Special Action: Take an action from the Action Menu corresponding to your current location.</p>
+</ul>
+<p>This is enough to start playing the game! You may place Robin in any empty pale green hex to start. See the full rules (including a quick start guide) here: <a href="https://docs.google.com/document/d/1dODRyiSsrCt-urURlNRwcQuIDMAce_aRZm8i3EQ6ns4/edit?usp=sharing">Google doc</a>.
+<h2>Tables</h2>
+</p>Below you will find all the tables needed for the game. Clicking on a heading opens it. Clicking again collapses it.</p>
+<p>Don't worry if you play a rule wrong here or there. The main aim of the game is to generate adventure stories, although your
+ultimate goal is to gain as much FAME as possible.</p>
+<p>Any feedback much appreciated!</p>
+<div class='table-name' onclick = "hide('Weather');">Weather Table</div>
+ <div id="Weather" style='display: none;'>
+  <div class = 'option' id = "Weather1" style='display: block;' onclick="hide('Weather1-desc');">1</div>
+  <div id = "Weather1-desc" style = 'display: none;'>Heavy Rain. Movement costs 3 AP</div>
+  <div class='option' id = "Weather2" style='display: block;' onclick="hide('Weather2-desc');">2</div>
+  <div id = "Weather2-desc" style = 'display: none;'>Light Rain. Movement costs 2 AP</div> 
+  <div class='option'  id = "Weather3" style='display: block; ' onclick="hide('Weather3-desc');">3</div>
+  <div id = "Weather3-desc" style = 'display: none;'>High Wind. -2 to ARCHERY skill</div> 
+  <div class='option'  id = "Weather4" style='display: block; ' onclick="hide('Weather4-desc');">4</div>
+  <div id = "Weather4-desc" style = 'display: none;'>Light Wind. -1 to ARCHERY skill</div> 
+  <div class='option'  id = "Weather5" style='display: block; ' onclick="hide('Weather5-desc');">5</div>
+  <div id = "Weather5-desc" style = 'display: none;'>Fine weather. No effect</div> 
+  <div class='option'  id = "Weather6" style='display: block; ' onclick="hide('Weather6-desc');">6</div>
+  <div id = "Weather6-desc" style = 'display: none;'>Hot. Armour bonuses cancelled</div> 
+ 
+ </div>
+ <div class='table-name' onclick = "hide('Field');">Field Encounter</div>
+  <div id="Field" style='display: none;'>
+   <div class='option'  id = "Field1" style='display: block; ' onclick="hide('Field1-desc');">1</div>
+  <div id = "Field1-desc" style = 'display: none;'><p>1: You are attacked by a party of the Sheriff’s men. Since they have caught you in the open, 
+  you have no option but to flee or fight. If you flee, take half of the total DM of the party as damage. 
+  If you fight and lose, they pursue you.</p></div>
+  <div class='option'  id = "Field2" style='display: block; ' onclick="hide('Field2-desc');">2</div>
+  <div id = "Field2-desc" style = 'display: none;'><p>2: You find a wayside shrine. You may spend 1 GOLD to gain 1 BLESSING.</p></div> 
+  <div class='option'  id = "Field3" style='display: block; ' onclick="hide('Field3-desc');">3</div>
+  <div id = "Field3-desc" style = 'display: none;'><p>3: You encounter a peasant toiling in a field. You may donate 1 GOLD for 1 FAME. If you have 2 or more GOLD, you may instead donate all of your GOLD for 3 FAME.</p></div> 
+  <div class='option'  id = "Field4" style='display: block; ' onclick="hide('Field4-desc');">4</div>
+  <div id = "Field4-desc" style = 'display: none;'><p>4: You encounter a knight-errant who invites you to deliver a message. If you do not already have a message to deliver, you may accept. Gain 1 GOLD. The destination of the message is determined by 1D6. 1-2: Nottingham 3-4: Southwell 5-6: Newark.</p></div> 
+  <div class='option'  id = "Field5" style='display: block; ' onclick="hide('Field5-desc');">5</div>
+  <div id = "Field5-desc" style = 'display: none;'><p>5: If you have no horses, you find a runaway horse. You may attempt to tame it. If you do, make a SNEAK check. If you succeed, gain 1 HORSE. If you fail, the horse kicks you. Lose 5 HP. If you have an unshod horse, roll 1D6. On 5 or 6, it becomes lame. Lose 1 HORSE.</p></div> 
+  <div class='option'  id = "Field6" style='display: block; ' onclick="hide('Field6-desc');">6</div>
+  <div id = "Field6-desc" style = 'display: none;'><p>6: If the weather is not “Heavy Rain”, you encounter a traveller. Roll on the Traveller Table.</p></div> 
+ </div>
+ <div class='table-name' onclick = "hide('Forest');">Forest Encounter</div>
+   <div id="Forest" style='display: none;'>
+   <div class='option'  id = "Forest1" style='display: block; ' onclick="hide('Forest1-desc');">1</div>
+  <div id = "Forest1-desc" style = 'display: none;'><p>You encounter a party of the Sheriff’s men. You may try to hide from them. Make a SNEAK check. If you succeed, you escape. If you fail the sneak check, you must fight the party. If they defeat you, they pursue.</p></div>
+  <div class='option'  id = "Forest2" style='display: block; ' onclick="hide('Forest2-desc');">2</div>
+  <div id = "Forest2-desc" style = 'display: none;'><p>You encounter a gamekeeper (10 DM). You may attack. If not, and you are carrying any FOOD, you are suspected of being a poacher. You may bribe the gamekeeper. Hand over a quantity of gold and roll a D6. If you roll lower than your bribe, it is accepted. Otherwise, the gamekeeper attacks you. If you successfully defeat the gamekeeper, you may take his HORN.</p></div> 
+  <div class='option'  id = "Forest3" style='display: block; ' onclick="hide('Forest3-desc');">3</div>
+  <div id = "Forest3-desc" style = 'display: none;'><p>You encounter a woodland hermit. You may hand over 3 FOOD. If you do, you get a BLESSING and 1 FAME. Otherwise, the hermit curses you and you gain 1 INF.</p></div> 
+  <div class='option'  id = "Forest4" style='display: block; ' onclick="hide('Forest4-desc');">4</div>
+  <div id = "Forest4-desc" style = 'display: none;'><p>You encounter a poor woodsman. You may donate 1 GOLD or 1 FOOD  for 1 FAME.</p></div> 
+  <div class='option'  id = "Forest5" style='display: block; ' onclick="hide('Forest5-desc');">5</div>
+  <div id = "Forest5-desc" style = 'display: none;'><p>You are charged by a boar (8 DM). There is no time to fire an arrow and you must fight (skip the archery phase). If you defeat it, gain 8 FOOD.</p></div> 
+  <div  class='option'  id = "Forest6" style='display: block; ' onclick="hide('Forest6-desc');">6</div>
+  <div id = "Forest6-desc" style = 'display: none;'><p>Roll on the Traveller Table.<p></div> 
+ </div>
+
+ <div class='table-name' onclick = "hide('Traveller');">Traveller Table</div>
+   <div id="Traveller" style='display: none;'>
+   <div class='option'  id = "Traveller1" style='display: block; ' onclick="hide('Traveller1-desc');">1</div>
+  <div id = "Traveller1-desc" style = 'display: none;'><p>Roll 1D6. On 2-6, you are attacked by 1D6 bandits. Each bandit has 5 DM. If you defeat the bandits, gain 1D6 GOLD. On 1, you are attacked by Robert Hod and his deadly band of 1D6 outlaws (1+1D6 enemies in total)! Each outlaw has 6 DM and they are impervious to arrows (skip the archery phase).</p></div>
+  <div class='option'  id = "Traveller2" style='display: block; ' onclick="hide('Traveller2-desc');">2</div>
+  <div id = "Traveller2-desc" style = 'display: none;'><p>Roll 1D6.</p>
+<p>
+1-3: You encounter an old woman (1 DM) with a cart of apples. If you attack and defeat her, gain 1 INF and 6D6 FOOD. Alternatively, you can buy up to 6 FOOD for 1 GOLD each. Alternatively, you can donate 1 GOLD for 1 FAME.
+</p><p>
+4: You encounter a band of 2 + 1D6 pilgrims (1 DM each). If you attack and defeat them, gain 1 RELIC and 1 INF per pilgrim. Otherwise, you may give 1 GOLD per pilgrim to gain 1 FAME in total.
+</p><p>
+5: You encounter a wandering monk (1 DM). If you attack and defeat him, you may take his habit (+1 SNEAK to one member of your party). Alternatively, you may donate 1 FOOD for 1 BLESSING.
+</p><p>
+6: You encounter a runaway squire (2 DM) who wishes to join your band! If you kill him, gain 1 GOLD and 3 FOOD. Otherwise, add him as an additional merry man. His stats are: SNEAK 4, ARCHERY 1, COMBAT 2, HP 3 and he does not require FOOD.
+</p>
+</p></div> 
+  <div class='option'  id = "Traveller3" style='display: block; ' onclick="hide('Traveller3-desc');">3</div>
+  <div id = "Traveller3-desc" style = 'display: none;'><p>3: Trader
+</p><p>
+Roll 1D6 for the type of trader encountered. Each trader has a bonus action.
+</p><p>
+1: Travelling Doctor. You may pay up to 3 GOLD to heal 1 HP for each outlaw at this location per GOLD paid. 2: Fishmonger. If the weather is not ”Hot” (6 on the weather table) you may pay up to 3 GOLD for 2 FOOD per GOLD paid. 3: Wandering Monk: You may pay 1 GOLD for a BLESSING. 4: Bowyer. You may pay 1 GOLD to improve the archery skill of 1 member of your party by 1. 5: Clothier. You may pay 1 GOLD to improve the SNEAK of 1 member of your party by 1. 6: Goldsmith. You may double your GOLD. 
+</p><p>
+Whether or not you took the bonus action, you may now attack the trader. If you do, roll for the trader’s DM (1D6). If you win the fight, gain 1D6 GOLD and 1 INF. If you gained 5 or 6 GOLD, gain 1 FAME.
+</p></div> 
+  <div class='option'  id = "Traveller4" style='display: block; ' onclick="hide('Traveller4-desc');">4</div>
+  <div id = "Traveller4-desc" style = 'display: none;'><p>4: Yeoman
+</p><p>
+Roll 1D6.
+</p><p>
+1: If your MUR is greater than 0, you are attacked by the brother of one of your victims, who has sworn revenge! Your foe is mounted and armoured and has 6 + 1D6 DM. Robin must fight the duel alone.
+</p><p>
+2-3: You encounter a poor mounted yeoman with 5 + 1D6 DM. If you defeat him, gain 1 INF and you may take his horse and a purse of 1D6 GOLD, halved, rounded up. Alternatively, you may donate 1 GOLD for 1 FAME.
+</p><p>
+4-6: You encounter a rich mounted yeoman with 6 + 1D6 DM. If you defeat him, gain 1 FAME and take his horse and 1D6 GOLD, doubled.
+</p></div> 
+  <div class='option'  id = "Traveller5" style='display: block; ' onclick="hide('Traveller5-desc');">5</div>
+  <div id = "Traveller5-desc" style = 'display: none;'><p>5: Wealthy Traveller
+</p><p>
+Roll 1D6.
+</p><p>
+1: You encounter 2 knights of Gisborne out for sport. Each knight is mounted, armoured and has 12 DM. If you defeat them, gain 1 FAME.
+</p><p>
+2: You encounter a band of 1D6 wealthy pilgrims (2 DM each) and a mounted armoured escort (11 DM). If you defeat them, gain 1D6 GOLD and 1 RELIC per pilgrim, plus 1 FAME.
+</p><p>
+3-5: You encounter a wealthy merchant (5 DM, mounted) with an escort of 1D6 men at arms (6 DM each). If you defeat them, gain 2D6 GOLD and 1D6 FAME.
+</p><p>
+6: You encounter a fine lady (3 DM, mounted) on a white palfrey. If you defeat her, gain 3D6 GOLD, a HORSE and 1 INF. If you leave her alone, gain 1 FAME per outlaw in your party.
+</p></div> 
+  <div class='option'  id = "Traveller6" style='display: block; ' onclick="hide('Traveller6-desc');">6</div>
+  <div id = "Traveller6-desc" style = 'display: none;'><p>6: Distinguished Personage
+</p><p>
+Roll 1D6.
+</p><p>
+1: King’s Messenger
+</p><p>
+You encounter a messenger of King Richard! You may surrender yourself to the King. Multiply your FAME by 2 and end the game. If you choose to attack the messenger (10 DM, mounted) and win, gain 2D6 GOLD and 1 INF.
+</p><p>
+2-3: Sir Guy of Gisborne
+</p><p>
+Sir Guy (mounted, armoured, 12 DM) is accompanied by 1D6 knights (mounted, armoured, 12 DM each). If you defeat his force, gain 3 FAME per foe defeated in the battle. Sir Guy is impervious to archery.
+</p><p>
+4-5: Bishop of Southwell
+</p><p>
+The Bishop is accompanied by 1D6 knights (12 DM, mounted, armoured) and 1D6 men at arms (6 DM, armoured). If you defeat them, you capture the Bishop! Gain 1D6 RELICS and 20 FAME. (If you have already captured the Bishop, you may capture another Bishop.)
+</p><p>
+6: Sheriff of Nottingham
+</p><p>
+The Sheriff (6 DM, mounted, armoured) is accompanied by 2D6 knights (12 DM, mounted, armoured). If you defeat them, you capture the Sheriff! Gain 40 FAME. (If you have already captured the Sheriff, you capture the new Sheriff, sent by Prince John as a replacement. You can have more than one captured Sheriff.)
+<p></div> 
+ </div>
+ 
+ <div class='table-name' onclick = "hide('Sheriff');">Sheriff's Party Table</div>
+   <div id="Sheriff" style='display: none;'>
+   <p>If you are told that you encounter a party of the Sheriff’s men, calculate the number in the party based on your MUR.</p>
+   <p>Man at arms:    6 DM.<br>
+Knight:        12 DM, armoured, mounted.<br>
+Catapult:    20 DM, impervious to archery.
+</p><p>
+If you defeat a party containing a catapult, add 20 to your party's COMBAT in future battles.
+</p>
+   <div class='option'  id = "Sheriff1" style='display: block;' onclick="hide('Sheriff1-desc');">0 MUR</div>
+  <div id = "Sheriff1-desc" style = 'display: none;'><p>Men at arms: 1&nbsp;&nbsp; Knights: 0&nbsp;&nbsp; Catapults: 0</p></div>
+  <div class='option'  id = "Sheriff2" style='display: block; ' onclick="hide('Sheriff2-desc');">1-4 MUR</div>
+  <div id = "Sheriff2-desc" style = 'display: none;'><p>Men at arms: 1D6 Knights: 1&nbsp;&nbsp; Catapults: 0</p></div> 
+  <div class='option'  id = "Sheriff3" style='display: block; ' onclick="hide('Sheriff3-desc');">5-9 MUR</div>
+  <div id = "Sheriff3-desc" style = 'display: none;'><p>Men at arms: 2D6 Knights: 1D6 Catapults: 0</p></div> 
+  <div class='option'  id = "Sheriff4" style='display: block; ' onclick="hide('Sheriff4-desc');">10-19 MUR</div>
+  <div id = "Sheriff4-desc" style = 'display: none;'><p>Men at arms: 2D6 Knights: 2D6 Catapults: 0</p></div> 
+  <div class='option'  id = "Sheriff5" style='display: block; ' onclick="hide('Sheriff5-desc');">20+ MUR</div>
+  <div id = "Sheriff5-desc" style = 'display: none;'><p>Men at arms: 3D6 Knights: 3D6 Catapults: 1</p></div> 
+
+ </div>
+ 
+  <div class='table-name' onclick = "hide('Action');">Action Menu</div>
+   <div id="Action" style='display: none;'>
+   
+   <div class='option' id = "Action1" style='display: block; ' onclick="hide('Action1-desc');">Field Hexes (3, 4, 9, 11, 14, 16, 18, 19, 20, 21, 22, 24, 29, 31, 32)</div>
+  <div id = "Action1-desc" style = 'display: none;'>
+	<div class='o' id = "Field-HB" onclick = "hide('HB-desc');">Hearty Breakfast</div>
+	<div id = "HB-desc" style = 'display: none;'>If this is your first action of the day, you may consume 2 FOOD to gain +1 COMBAT for one outlaw in your location.</div>
+	<div class='o'  id = "Field-Fi" onclick = "hide('Fi-desc');">Fish</div>
+	<div id = "Fi-desc" style = 'display: none;'>If next to a river, you may attempt to fish. Roll a D6. If weather is Heavy Rain, add 1 to your roll. On 1-3, you find nothing. On 4, you catch a perch (1 FOOD). On 5, a trout (2 FOOD). On 6, a pike (3 FOOD). If the weather is Rain or Heavy Rain, do this action again without spending another AP.</div>
+	<div class='o'  id = "Field-Bl" onclick = "hide('Bl-desc');">Blow horn</div>
+	<div id = "Bl-desc" style = 'display: none;'>If you have a HORN, you may blow it. Move any outlaws within 1 hex to your location. Do not move outlaws from the Castle Dungeon. Do not move outlaws across the river. Do not move Marian if she is at Gisborne Castle and has not yet been rescued.</div>
+	<div class='o'  id = "Field-Hu" onclick = "hide('Hu-desc');">Hunt</div>
+	<div id = "Hu-desc" style = 'display: none;'>Do the following for each outlaw at your location: Roll a D6: 1-4: You find nothing 5-6: You spot a hare. If you pass an ARCHERY check, gain 2 FOOD.</div>
+	<div class='o'  id = "Field-Fo" onclick = "hide('Fo-desc');">Forage</div>
+	<div id = "Fo-desc" style = 'display: none;'>Roll a D6: 1: You eat an unhealthy-looking mushroom. Lose 1 HP. 2: You find a swarm of bees. Gain 1D6 food and lose an equal number of HP. 3: You find some brambles. Gain 1 FOOD and lose 1 HP. 4: You find some berries. Gain 1 FOOD. 5: You find an abandoned vegetable garden. Gain 2 FOOD. 6: You find an apple tree. You shake it. Gain 1D6 food.</div>
+  </div>
+  <div class='option'  id = "Action2" style='display: block; ' onclick="hide('Action2-desc');">Forest Hexes (1, 2, 6, 7, 8, 12, 13)</div>
+  <div id = "Action2-desc" style = 'display: none;'>
+	<div class='o' id = "Forest-FH" onclick = "hide('FH-desc');">Hunt</div>
+	<div id = "FH-desc" style = 'display: none;'>Do the following for each outlaw at your location: Roll a D6. 1-3: you find nothing. 4: you spot a woodcock. Make an ARCHERY check with a -1 to ARCHERY skill. If you succeed, gain 2 FOOD. 5: a deer. Make an ARCHERY check. If you succeed, gain 6 FOOD. 6: a boar. Make an ARCHERY check. If you succeed, gain 8 FOOD. If you fail, take 8 DM (shared however you wish among outlaws at this location).</div>
+	<div class='o'  id = "Forest-CT" onclick = "hide('CT-desc');">Climb a Tree</div>
+	<div id = "CT-desc" style = 'display: none;'>Roll 1D6. 1: you fall out. Lose 1D6 HP. 2-4: you survey the surroundings. Add 1 to your next die roll. 5: You gain valuable insight. Roll 1D6 and save the result as a PLAN. 6: You have a revelation. Choose a value from 1 to 6 and save it as a PLAN.</div>
+	<div class='o'  id = "Forest-LA" onclick = "hide('LA-desc');">Lay in Ambush</div>
+	<div id = "LA-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, roll on the Traveller Table.</div>
+	<div class='o'  id = "Forest-CW" onclick = "hide('CW-desc');">Council of War</div>
+	<div id = "CW-desc" style = 'display: none;'>If there are 2 or more outlaws in your location, consume 2 BEER. If you do, roll 1D6. Save the result as a PLAN.</div>
+	<div class='o'  id = "Forest-Ma" onclick = "hide('Ma-desc');">Marriage</div>
+	<div id = "Ma-desc" style = 'display: none;'>(Once per game). If Friar Tuck and Marian are present, you may marry Marian and Robin. Gain 20 FAME. On future turns, Marian must remain with Robin.
+</div>
+	<div class='o'  id = "Forest-Tr" onclick = "hide('Tr-desc');">Train</div>
+	<div id = "Tr-desc" style = 'display: none;'>If there are at least 2 outlaws at this location, you may give one of them +1 COMBAT and the other -2 HP.</div>
+	<div class='o'  id = "Forest-Hi" onclick = "hide('Hi-desc');">Hide</div>
+	<div id = "Hi-desc" style = 'display: none;'>If you are pursued, make a SNEAK check. If you succeed, you are no longer pursued.
+</div>
+  
+  </div> 
+  <div class='option' id = "Action3" style='display: block; ' onclick="hide('Action3-desc');">Mill (5)</div>
+   <div id = "Action3-desc" style = 'display: none;'>
+	<div class='o'  id = "Mill-GG" onclick = "hide('GG-desc');">Grind Grain</div>
+	<div id = "GG-desc" style = 'display: none;'>If you have 5 or less FOOD and a HORSE, double your food.</div>
+	<div class='o'  id = "Mill-Br" onclick = "hide('Brew-desc');">Brew</div>
+	<div id = "Brew-desc" style = 'display: none;'>You may convert any amount of FOOD to the same amount of BEER.</div>
+	<div class='o'  id = "Mill-LaB" onclick = "hide('Mill-Lab-desc');">Loot and Burn</div>
+	<div id = "Mill-Lab-desc" style = 'display: none;'>Gain 20 FOOD, 20 BEER and 10 GOLD. Set fire to the mill. This will kill 1D6 villeins. Each villein killed gives you +1 MUR and +1 INF. Gain an additional +5 INF. You may not perform further actions here or re-enter this location.</div>
+   </div> 
+  <div class='option'  id = "Action4" style='display: block; ' onclick="hide('Action4-desc');">Archery Butts (10)</div>
+  <div id = "Action4-desc" style = 'display: none;'>
+	<div class='o'  id = "AB-PA" onclick = "hide('PA-desc');">Practice Archery</div>
+	<div id = "PA-desc" style = 'display: none;'>Improve the ARCHERY skill of each outlaw at this location by 1.</div>  
+  </div> 
+  <div class='option'  id = "Action5" style='display: block; ' onclick="hide('Action5-desc');">Southwell Minster (15)</div>
+  <div id = "Action5-desc" style = 'display: none;'>
+	<div class='o' iv id = "SM-Si" onclick = "hide('Si-desc');">Simony</div>
+	<div id = "Si-desc" style = 'display: none;'>Pay 3 GOLD, Reduce your MUR by 1 but gain +2 INF.</div>  
+	<div class='o'  id = "SM-RB" onclick = "hide('RB-desc');">Ransom the Bishop</div>
+	<div id = "RB-desc" style = 'display: none;'>If you have captured the Bishop, you may ask for a ransom. The ransom offered is 5D6 GOLD. If you accept the ransom, you lose the Bishop. Make a SNEAK check. If you fail, you are ambushed and must fight 6 men at arms (6 DM each).</div>  
+	<div class='o'  id = "SM-SS" onclick = "hide('SS-desc');">Seek Sanctuary</div>
+	<div id = "SS-desc" style = 'display: none;'>If you are pursued, roll a D6. On a 4-6, you gain sanctuary. You are no longer pursued. On a 1-3, you are turned away. Your next action must be a move to a Field or Forest location.
+</div>  
+	<div class='o'  id = "SM-SR" onclick = "hide('SR-desc');">Sell a Relic</div>
+	<div id = "SR-desc" style = 'display: none;'>You may sell a RELIC and receive 1D6 GOLD.</div>  
+	<div class='o'  id = "SM-deliver" onclick = "hide('SM-D-desc');">Deliver a Message</div>
+	<div id = "SM-D-desc" style = 'display: none;'>If you have a message to deliver, you may deliver it. Roll 1D6. 1: The message contains a lewd proposition.Gain 1 INF. 2: You are rewarded with 1 GOLD for delivering the message. 3: A reply is drafted. You may choose to deliver the reply. If you do, roll for the destination: 1-3: Newark 4-6: Nottingham and gain 2 GOLD as a delivery fee. 4: The recipient is very grateful. Gain 3 BLESSINGS. 5: The Bishop awards you with a golden Crozier (gain 3 GOLD) and a precious RELIC. 6: The message turns out to be of vital importance! Gain 1 FAME for delivering it. You are also rewarded with 2 RELICS and a BLESSING.</div>  
+	<div class='o'  id = "SM-LB" onclick = "hide('SM-LB-desc');">Loot and Burn</div>
+	<div id = "SM-LB-desc" style = 'display: none;'>Gain 50 GOLD and 2D6 RELICS. Kill 1D6 priests. Each priest killed gives +1 MUR and +1 INF. Kill 2D6 choristers. Each chorister killed gives +1 MUR and +5 INF. Your next action must be a move. You may not re-enter this location.</div>  	
+  </div> 
+    <div class='option'  id = "Action6" style='display: block; ' onclick="hide('Action6-desc');">Newark (17)</div>
+  <div id = "Action6-desc" style = 'display: none;'>
+  <p>Upon arrival in Newark, if you have any HORSES, you must pay a stabling charge of 1 GOLD. If you cannot pay, you lose your horses.</p>
+	<div class='o'  id = "Ne-VB" onclick = "hide('VB-desc');">Visit the Bazaar</div>
+	<div id = "VB-desc" style = 'display: none;'>Pay 2 GOLD. Roll 1D6. Gain the following: 1: A loaf of bread. Gain 1 FOOD. 2: A Saint’s fingerbone. Gain 1 RELIC. 3: A barrel of beer. Gain 3 BEER. 4: A hood. Add +1 SNEAK to one member of your party. 5: Rusty mail. Add +1 ARMOUR to one member of your party. 6: A HORN.
+</div>
+	<div class='o'  id = "Ne-VC" onclick = "hide('VC-desc');">Visit the Clothier</div>
+	<div id = "VC-desc" style = 'display: none;'>You may pay 8 GOLD to equip Robin with a suit of Lincoln Green and gain 1 FAME. The suit allows Robin to automatically pass all SNEAK checks in Forest locations, even if a 6 is rolled, provided that he is alone. Alternatively, you may pay 6 GOLD for a suit of armour. This grants +3 ARMOUR to a member of your party (remember, in Hot weather the armour bonus is cancelled).</div> 
+	<div class='o'  id = "Ne-Beg" onclick = "hide('Beg-desc');">Beg</div>
+	<div id = "Beg-desc" style = 'display: none;'>Gain +1 GOLD per outlaw present. Make a SNEAK check. If you fail, you are driven out of town. Each outlaw present loses 1 HP and your next action must be a move.</div> 
+	<div class='o'  id = "Ne-BT" onclick = "hide('BT-desc');">Besiege the Town</div>
+	<div id = "BT-desc" style = 'display: none;'>If you have a catapult, you may attack the castle garrison (50 DM). If you defeat it, you may loot 100 GOLD. Gain +10 INF. You burn Newark to the ground. Your next action must be a move, and you may not return to this location for the rest of the game.</div> 
+	<div class='o'  id = "Ne-Deliver" onclick = "hide('Ne-Deliver-desc');">Deliver a Message</div>
+	<div id = "Ne-Deliver-desc" style = 'display: none;'>If you have a message to deliver, you may deliver it. Roll 1D6. 1: The message contains a lewd proposition. You are horsewhipped. Lose 3 HP. 2: You are rewarded with 1 GOLD for delivering the message. 3: A reply is drafted. You may choose to deliver the reply. If you do, roll for the destination: 1-3: Southwell 4-6: Nottingham and gain 2 GOLD as a delivery fee. 4: The recipient is very happy. Gain a BLESSING and your choice of reward: 2 FOOD or 2 BEER or 2 GOLD. 5: As a reward, the recipient whispers the password to Gisborne Castle to you.  6: The message turns out to be of vital importance! Gain 1 FAME for delivering it. You are also rewarded with a fine HORSE.</div> 
+	<div class='o'  id = "Ne-VP" onclick = "hide('VP-desc');">Visit the Pawnbroker</div>
+	<div id = "VP-desc" style = 'display: none;'>You may sell any of the following for 2 GOLD each: RELIC, HORN, HORSE.</div> 	
+  </div> 
+      <div class='option'  id = "Action7" style='display: block; ' onclick="hide('Action7-desc');">Nottingham Green (23)</div>
+  <div id = "Action7-desc" style = 'display: none;'>
+	<div class='o'  id = "NG-WM" onclick = "hide('WM-desc');">Wrestling Match</div>
+	<div id = "WM-desc" style = 'display: none;'>If there are at least 2 outlaws in this location, you may give one of them +1 COMBAT and the other -1 COMBAT.</div>    
+	<div class='o'  id = "NG-GF" onclick = "hide('GF-desc');">Gamble at the Fair</div>
+	<div id = "GF-desc" style = 'display: none;'>Wager an amount of GOLD from your supply. Roll a die. On 1-3, lose your wager. On 4-6, double your wager.</div>    
+	<div class='o'  id = "NG-Silver" onclick = "hide('Silver-desc');">Shoot for the Silver Arrow</div>
+	<div id = "Silver-desc" style = 'display: none;'>(once per game): You may enter the contest for the Silver Arrow. Make six ARCHERY checks for Robin. If you fail at most one of the six checks, make one more ARCHERY check. If you succeed, you win the Silver Arrow! Gain 15 FAME. Make a SNEAK check. If you fail the check, or if you now have 30 or more FAME, you are recognised! You must fight a force of the Sheriff’s men, as determined by the Sheriff’s Party Table. Your next action must be a move, and if you do not eliminate them, they pursue you.</div>    
+  </div> 
+      <div class='option'  id = "Action8" style='display: block; ' onclick="hide('Action8-desc');">Abbey (25)</div>
+  <div id = "Action8-desc" style = 'display: none;'>
+	<div class='o'  id = "Ab-SR" onclick = "hide('ASR-desc');">Steal a Relic</div>
+	<div id = "ASR-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, gain +1 RELIC. If you fail, gain +1 INF.
+</div>
+	<div class='o'  id = "Ab-RA" onclick = "hide('RA-desc');">Request Alms</div>
+	<div id = "RA-desc" style = 'display: none;'>Gain 1 FOOD and 1 BEER. Your next action must be a move.
+</div>
+	<div class='o'  id = "Ab-HO" onclick = "hide('HO-desc');">Take Holy Orders</div>
+	<div id = "HO-desc" style = 'display: none;'>If Friar Tuck and no other outlaws are at this location, you may renounce your criminal ways. Reduce your INF to 0. Lose 1 FAME per remaining HP Robin has. End the game.
+</div>
+	<div class='o'  id = "Ab-DisM" onclick = "hide('DisM-desc');">Disguise yourselves as Monks</div>
+	<div id = "DisM-desc" style = 'display: none;'>Make a SNEAK check. If successful, automatically pass your next SNEAK check, regardless of which outlaws are present. If unsuccessful, you are banished in shame. Your next action must be a move, and you may not return to this location for the rest of the game.</div>
+  
+  </div> 
+      <div class='option'  id = "Action9" style='display: block; ' onclick="hide('Action9-desc');">Nunnery (26)</div>
+  <div id = "Action9-desc" style = 'display: none;'>
+	<div class='o'  id = "Heal" onclick = "hide('Heal-desc');">Heal</div>
+	<div id = "Heal-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, you may add 1 HP to one outlaw at this location. If you fail, your next action must be a move to a Field or Forest location.</div>  
+  </div> 
+      <div class='option'  id = "Action10" style='display: block; ' onclick="hide('Action10-desc');">Stable (27)</div>
+  <div id = "Action10-desc" style = 'display: none;'>
+	<div class='o'  id = "St-BuyH" onclick = "hide('BuyH-desc');">Buy a Horse</div>
+	<div id = "BuyH-desc" style = 'display: none;'>You may buy a HORSE for 5 GOLD.</div>
+	<div class='o'  id = "St-SH" onclick = "hide('SH-desc');">Sell a Horse</div>
+	<div id = "SH-desc" style = 'display: none;'>You may sell a HORSE for 3 GOLD.</div>
+	<div class='o'  id = "St-Steal" onclick = "hide('St-Steal-desc');">Steal a Horse</div>
+	<div id = "St-Steal-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, gain 1 HORSE and 1 INF. If you fail, you must fight 1D6 men at arms (6 DM each).</div>
+  </div> 
+  <div class='option'  id = "Action11" style='display: block; ' onclick="hide('Action11-desc');">Nottingham (28)</div>
+  <div id = "Action11-desc" style = 'display: none;'>
+	<p>Upon arrival in Nottingham, if more than one outlaw is present, make a SNEAK check. If you fail, one of you is recognised! You must send one outlaw from this location, other than Robin,  to the Castle Dungeons.</p>
+	<div class='o'  id = "No-Smith" onclick = "hide('Smith-desc');">Visit the Smith</div>
+	<div id = "Smith-desc" style = 'display: none;'>You may pay 4 GOLD for a pair of gauntlets, which grant +1 ARMOUR to one member of your party, or pay 4 GOLD to shoe one horse. (Shod horses are not affected when you roll a 5 on the Field Encounter Table.)
+</div> 
+	<div class='o'  id = "No-Busk" onclick = "hide('Busk-desc');">Busk</div>
+	<div id = "Busk-desc" style = 'display: none;'>If Alan a Dale is in your party, gain 1D6 GOLD. Make a SNEAK check. If you fail, you are recognised! Your next action must be a move.</div>  
+	<div class='o'  id = "No-Tavern" onclick = "hide('Tavern-desc');">Visit the Tavern</div>
+	<div id = "Tavern-desc" style = 'display: none;'>Pay 1 GOLD per member of your party. Roll 1D6. 1-2: Choose a number between 1 and 6. Gain it as a PLAN. 3-4: You learn the password of Gisborne Castle for this week (Monday-Sunday). 5-6: You learn the password of Nottingham Castle for this week (Monday-Sunday).</div> 
+	<div class='o'  id = "No-MD" onclick = "hide('MD-desc');">Market Day</div>
+	<div id = "MD-desc" style = 'display: none;'>If today is Saturday, you may exchange FOOD, GOLD and BEER at a rate of 1-1.
+</div> 
+	<div class='o'  id = "No-DR" onclick = "hide('DR-desc');">Daring Rescue</div>
+	<div id = "DR-desc" style = 'display: none;'>If any outlaws are in the Castle Dungeon and you know the password for Nottingham Castle, you may attempt to rescue them. You must pass 3 guards. For each guard, you must make a SNEAK check. If you fail one of the checks, the guard (10 DM) attacks you and you may not use archery. If you defeat the guards or pass all the SNEAK checks, move all the outlaws from the Dungeon to Nottingham and gain 10 FAME. You are attacked by a force of the Sheriff’s men (see Sheriff’s Party Table) and they pursue you. Outlaws rescued from the dungeon are exhausted and are reduced to 1 COMBAT and 1 HP.</div> 
+	<div class='o'  id = "No-Ra" onclick = "hide('Ra-desc');">Ransom the Sheriff</div>
+	<div id = "Ra-desc" style = 'display: none;'>If you have captured the Sheriff, you may ransom him. Demand a sum of GOLD. Roll 1D6 and keep adding the total until you have rolled a 1 thrice. If the total exceeds your demand, receive the sum of GOLD you demanded. Otherwise, you must keep the Sheriff.</div> 
+	<div class='o'  id = "No-DM" onclick = "hide('No-DM-desc');">Deliver a Message</div>
+	<div id = "No-DM-desc" style = 'display: none;'>If you have a message to deliver, you may deliver it. Roll 1D6. 1: The message contains a lewd proposition. You are horsewhipped. Lose 3 HP. 2: You are rewarded with 1 GOLD for delivering the message. 3: A reply is drafted. You may choose to deliver the reply. If you do, roll for the destination: 1-3: Southwell 4-6: Newark and gain 2 GOLD as a delivery fee. 4: The recipient takes you into their confidence. Do the following twice: roll 1D6 and save the result as a PLAN. 5: As a reward, the recipient whispers the password to Nottingham Castle to you.  6: The message turns out to be of vital importance! Gain 1 FAME for delivering it. You are also rewarded with a fine HORSE.</div> 
+	<div class='o'  id = "No-BH" onclick = "hide('BH-desc');">Break into a House</div>
+	<div id = "BH-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, gain 1D6 GOLD. If you fail and it is the first time you have failed this action, you are beaten. Gain 1 INF and lose 2 HP and all your GOLD. If you fail and you have failed this action before, you are punished by mutilation. Reduce Robin’s ARCHERY to 0.</div> 
+  </div> 
+  <div class='option'  id = "Action12" style='display: block; ' onclick="hide('Action12-desc');">Gisborne Castle (30)</div>
+  <div id = "Action12-desc" style = 'display: none;'>
+ 	<div class='o'  id = "GC-Req" onclick = "hide('Req-desc');">Request an Audience with Sir Guy</div>
+	<div id = "Req-desc" style = 'display: none;'>Roll 1D6. 1-2: Sir Guy is angered by your presumption and has you flogged. Lose 3 HP. 3-4: Sir Guy refuses to see you, but you are able to overhear his conversation. Gain the password to Gisborne Castle. 5-6: Sir Guy is impressed by your bravado. You may join his service. If you do, gain +2 ARMOUR now, plus +1 GOLD and +1 INF at the beginning of each day for the rest of the game. </div>
+	<div class='o'  id = "GC-RM" onclick = "hide('RM-desc');">Rescue Marian</div>
+	<div id = "RM-desc" style = 'display: none;'>If you know the password to Gisborne Castle, you may attempt to rescue Marian if she has not yet been rescued. You must pass 3 guards. For each guard, you must make a SNEAK check. If you fail one of the checks, the guard (10 DM) attacks you and you must skip the Archery Phase. If you defeat the guards or pass all the SNEAK checks, Marian is freed. You are attacked by a force of 1D6 knights (mounted, armoured, 12 DM each) and they pursue you.</div> 
+  
+  </div> 
+
+ </div>
+
+</body>
+
+
+
+</html>
