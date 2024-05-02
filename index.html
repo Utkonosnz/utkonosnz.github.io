@@ -80,17 +80,17 @@ ultimate goal is to gain as much FAME as possible.</p>
 <div class='table-name' onclick = "hide('Weather');">Weather Table</div>
  <div id="Weather" style='display: none;'>
   <div class = 'option' id = "Weather1" style='display: block;' onclick="hide('Weather1-desc');">1</div>
-  <div id = "Weather1-desc" style = 'display: none;'>Heavy Rain. Movement costs 3 AP</div>
+  <div id = "Weather1-desc" style = 'display: none;'>Heavy Rain. You may take a maximum of one move action today.</div>
   <div class='option' id = "Weather2" style='display: block;' onclick="hide('Weather2-desc');">2</div>
-  <div id = "Weather2-desc" style = 'display: none;'>Light Rain. Movement costs 2 AP</div> 
+  <div id = "Weather2-desc" style = 'display: none;'Wind. All ARCHERY checks fail today.</div> 
   <div class='option'  id = "Weather3" style='display: block; ' onclick="hide('Weather3-desc');">3</div>
-  <div id = "Weather3-desc" style = 'display: none;'>High Wind. -2 to ARCHERY skill</div> 
+  <div id = "Weather3-desc" style = 'display: none;'>Fine weather. No effect.</div> 
   <div class='option'  id = "Weather4" style='display: block; ' onclick="hide('Weather4-desc');">4</div>
-  <div id = "Weather4-desc" style = 'display: none;'>Light Wind. -1 to ARCHERY skill</div> 
+  <div id = "Weather4-desc" style = 'display: none;'>Fine weather. No effect.</div> 
   <div class='option'  id = "Weather5" style='display: block; ' onclick="hide('Weather5-desc');">5</div>
-  <div id = "Weather5-desc" style = 'display: none;'>Fine weather. No effect</div> 
+  <div id = "Weather5-desc" style = 'display: none;'>Fine weather. No effect.</div> 
   <div class='option'  id = "Weather6" style='display: block; ' onclick="hide('Weather6-desc');">6</div>
-  <div id = "Weather6-desc" style = 'display: none;'>Hot. Armour bonuses cancelled</div> 
+  <div id = "Weather6-desc" style = 'display: none;'>Hot. All ARMOUR bonuses are cancelled.</div> 
  
  </div>
  <div class='table-name' onclick = "hide('Field');">Field Encounter</div>
@@ -228,9 +228,9 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
 	<div class='o' id = "Field-HB" onclick = "hide('HB-desc');">Hearty Breakfast</div>
 	<div id = "HB-desc" style = 'display: none;'>If this is your first action of the day, you may consume 2 FOOD to gain +1 COMBAT for one outlaw in your location.</div>
 	<div class='o'  id = "Field-Fi" onclick = "hide('Fi-desc');">Fish</div>
-	<div id = "Fi-desc" style = 'display: none;'>If next to a river, you may attempt to fish. Roll a D6. If weather is Heavy Rain, add 1 to your roll. On 1-3, you find nothing. On 4, you catch a perch (1 FOOD). On 5, a trout (2 FOOD). On 6, a pike (3 FOOD). If the weather is Rain or Heavy Rain, do this action again without spending another AP.</div>
+	<div id = "Fi-desc" style = 'display: none;'>If next to a river, you may attempt to fish. Roll a D6. If weather is Heavy Rain, add 1 to your roll. On 1-3, you find nothing. On 4, you catch a perch (1 FOOD). On 5, a trout (2 FOOD). On 6, a pike (3 FOOD). If the weather is Rain or Heavy Rain, do this action again without spending another action.</div>
 	<div class='o'  id = "Field-Bl" onclick = "hide('Bl-desc');">Blow horn</div>
-	<div id = "Bl-desc" style = 'display: none;'>If you have a HORN, you may blow it. Move any outlaws within 1 hex to your location. Do not move outlaws from the Castle Dungeon. Do not move outlaws across the river. Do not move Marian if she is at Gisborne Castle and has not yet been rescued.</div>
+	<div id = "Bl-desc" style = 'display: none;'>If you have a HORN, you may blow it. Move any outlaws within 1 hex to your location. Do not move outlaws from the Castle Dungeon. Do not move outlaws across the river. Do not move Marian if she is at Gisborne Castle and has not yet been rescued. You do not lose your HORN by taking this action.</div>
 	<div class='o'  id = "Field-Hu" onclick = "hide('Hu-desc');">Hunt</div>
 	<div id = "Hu-desc" style = 'display: none;'>Do the following for each outlaw at your location: Roll a D6: 1-4: You find nothing 5-6: You spot a hare. If you pass an ARCHERY check, gain 2 FOOD.</div>
 	<div class='o'  id = "Field-Fo" onclick = "hide('Fo-desc');">Forage</div>
@@ -239,9 +239,9 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
   <div class='option'  id = "Action2" style='display: block; ' onclick="hide('Action2-desc');">Forest Hexes (1, 2, 6, 7, 8, 12, 13)</div>
   <div id = "Action2-desc" style = 'display: none;'>
 	<div class='o' id = "Forest-FH" onclick = "hide('FH-desc');">Hunt</div>
-	<div id = "FH-desc" style = 'display: none;'>Do the following for each outlaw at your location: Roll a D6. 1-3: you find nothing. 4: you spot a woodcock. Make an ARCHERY check with a -1 to ARCHERY skill. If you succeed, gain 2 FOOD. 5: a deer. Make an ARCHERY check. If you succeed, gain 6 FOOD. 6: a boar. Make an ARCHERY check. If you succeed, gain 8 FOOD. If you fail, take 8 DM (shared however you wish among outlaws at this location).</div>
+	<div id = "FH-desc" style = 'display: none;'>Do the following for each outlaw at your location: Roll a D6. 1-3: you find nothing. 4: you spot a woodcock. Make an ARCHERY check. If you succeed, gain 2 FOOD. 5: a deer. Make an ARCHERY check. If you succeed, gain 6 FOOD. 6: a boar. Make an ARCHERY check. If you succeed, gain 8 FOOD. If you fail, take 8 DM (shared however you wish among outlaws at this location).</div>
 	<div class='o'  id = "Forest-CT" onclick = "hide('CT-desc');">Climb a Tree</div>
-	<div id = "CT-desc" style = 'display: none;'>Roll 1D6. 1: you fall out. Lose 1D6 HP. 2-4: you survey the surroundings. Add 1 to your next die roll. 5: You gain valuable insight. Roll 1D6 and save the result as a PLAN. 6: You have a revelation. Choose a value from 1 to 6 and save it as a PLAN.</div>
+	<div id = "CT-desc" style = 'display: none;'>Roll 1D6. 1: you fall out. Robin loses 1D6 HP. 2-4: you survey the surroundings. Add 1 to your next die roll. 5: You gain valuable insight. Roll 1D6 and save the result as a PLAN. 6: You have a revelation. Choose a value from 1 to 6 and save it as a PLAN.</div>
 	<div class='o'  id = "Forest-LA" onclick = "hide('LA-desc');">Lay in Ambush</div>
 	<div id = "LA-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, roll on the Traveller Table.</div>
 	<div class='o'  id = "Forest-CW" onclick = "hide('CW-desc');">Council of War</div>
@@ -293,7 +293,7 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
 	<div id = "VB-desc" style = 'display: none;'>Pay 2 GOLD. Roll 1D6. Gain the following: 1: A loaf of bread. Gain 1 FOOD. 2: A Saint’s fingerbone. Gain 1 RELIC. 3: A barrel of beer. Gain 3 BEER. 4: A hood. Add +1 SNEAK to one member of your party. 5: Rusty mail. Add +1 ARMOUR to one member of your party. 6: A HORN.
 </div>
 	<div class='o'  id = "Ne-VC" onclick = "hide('VC-desc');">Visit the Clothier</div>
-	<div id = "VC-desc" style = 'display: none;'>You may pay 8 GOLD to equip Robin with a suit of Lincoln Green and gain 1 FAME. The suit allows Robin to automatically pass all SNEAK checks in Forest locations, even if a 6 is rolled, provided that he is alone. Alternatively, you may pay 6 GOLD for a suit of armour. This grants +3 ARMOUR to a member of your party (remember, in Hot weather the armour bonus is cancelled).</div> 
+	<div id = "VC-desc" style = 'display: none;'>You may pay 8 GOLD to equip Robin with a suit of Lincoln Green and gain 1 FAME. The suit allows your party to automatically pass all SNEAK checks in Forest locations, even if a 6 is rolled. Alternatively, you may pay 6 GOLD for a suit of armour. This grants +3 ARMOUR to a member of your party (remember, in Hot weather the armour bonus is cancelled).</div> 
 	<div class='o'  id = "Ne-Beg" onclick = "hide('Beg-desc');">Beg</div>
 	<div id = "Beg-desc" style = 'display: none;'>Gain +1 GOLD per outlaw present. Make a SNEAK check. If you fail, you are driven out of town. Each outlaw present loses 1 HP and your next action must be a move.</div> 
 	<div class='o'  id = "Ne-BT" onclick = "hide('BT-desc');">Besiege the Town</div>
@@ -331,6 +331,13 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
   <div id = "Action9-desc" style = 'display: none;'>
 	<div class='o'  id = "Heal" onclick = "hide('Heal-desc');">Heal</div>
 	<div id = "Heal-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, you may add 1 HP to one outlaw at this location. If you fail, your next action must be a move to a Field or Forest location.</div>  
+	<div class='o'  id = "SendMarian" onclick = "hide('SendMarian-desc');">Send Marian to the convent</div>
+	<div id = "SendMarian-desc" style = 'display: none;'>If Marian and Robin are not married and Marian is at this location, you may make her a nun. Pay 1 GOLD per day remaining for her lodging, and in return gain 1
+BLESSING and 1 FAME at the beginning of each day for the rest of the game. Remove Marian
+from the game.</div> 
+	<div class='o'  id = "HideN" onclick = "hide('HideN-desc');">Hide out</div>
+	<div id = "HideN-desc" style = 'display: none;'>Hide out: Roll a D6. On 6, the Abbess poisons you. Reduce Robin’s HP to 0. Otherwise, if you are pursued, you are no longer pursued, and you lose a number of days from the calendar
+according to your roll: 1-2: 1 day 3-4: 2 days 5: 3 days.</div> 
   </div> 
       <div class='option'  id = "Action10" style='display: block; ' onclick="hide('Action10-desc');">Stable (27)</div>
   <div id = "Action10-desc" style = 'display: none;'>
