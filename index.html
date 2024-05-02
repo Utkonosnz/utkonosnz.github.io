@@ -106,7 +106,7 @@ ultimate goal is to gain as much FAME as possible.</p>
   <div class='option'  id = "Field5" style='display: block; ' onclick="hide('Field5-desc');">5</div>
   <div id = "Field5-desc" style = 'display: none;'><p>5: If you have no horses, you find a runaway horse. You may attempt to tame it. If you do, make a SNEAK check. If you succeed, gain 1 HORSE. If you fail, the horse kicks you. Lose 5 HP. If you have an unshod horse, roll 1D6. On 5 or 6, it becomes lame. Lose 1 HORSE.</p></div> 
   <div class='option'  id = "Field6" style='display: block; ' onclick="hide('Field6-desc');">6</div>
-  <div id = "Field6-desc" style = 'display: none;'><p>6: If the weather is not “Heavy Rain”, you encounter a traveller. Roll on the Traveller Table.</p></div> 
+  <div id = "Field6-desc" style = 'display: none;'><p>6: If the weather is not “Rain”, you encounter a traveller. Roll on the Traveller Table.</p></div> 
  </div>
  <div class='table-name' onclick = "hide('Forest');">Forest Encounter</div>
    <div id="Forest" style='display: none;'>
@@ -226,13 +226,16 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
 	<div class='o' id = "Field-HB" onclick = "hide('HB-desc');">Hearty Breakfast</div>
 	<div id = "HB-desc" style = 'display: none;'>If this is your first action of the day, you may consume 2 FOOD to gain +1 COMBAT for one outlaw in your location.</div>
 	<div class='o'  id = "Field-Fi" onclick = "hide('Fi-desc');">Fish</div>
-	<div id = "Fi-desc" style = 'display: none;'>If next to a river, you may attempt to fish. Roll a D6. If weather is Heavy Rain, add 1 to your roll. On 1-3, you find nothing. On 4, you catch a perch (1 FOOD). On 5, a trout (2 FOOD). On 6, a pike (3 FOOD). If the weather is Rain or Heavy Rain, do this action again without spending another action.</div>
+	<div id = "Fi-desc" style = 'display: none;'>If next to a river, you may attempt to fish. Roll a D6. If weather is Rain, add 1 to your roll. On 1-3, you find nothing. On 4, you catch a perch (1 FOOD). On 5, a trout (2 FOOD). On 6, a pike (3 FOOD). If the weather is Rain, do this action again without spending another action.</div>
 	<div class='o'  id = "Field-Bl" onclick = "hide('Bl-desc');">Blow horn</div>
 	<div id = "Bl-desc" style = 'display: none;'>If you have a HORN, you may blow it. Move any outlaws within 1 hex to your location. Do not move outlaws from the Castle Dungeon. Do not move outlaws across the river. Do not move Marian if she is at Gisborne Castle and has not yet been rescued. You do not lose your HORN by taking this action.</div>
 	<div class='o'  id = "Field-Hu" onclick = "hide('Hu-desc');">Hunt</div>
 	<div id = "Hu-desc" style = 'display: none;'>Do the following for each outlaw at your location: Roll a D6: 1-4: You find nothing 5-6: You spot a hare. If you pass an ARCHERY check, gain 2 FOOD.</div>
 	<div class='o'  id = "Field-Fo" onclick = "hide('Fo-desc');">Forage</div>
-	<div id = "Fo-desc" style = 'display: none;'>Roll a D6: 1: You eat an unhealthy-looking mushroom. Lose 1 HP. 2: You find a swarm of bees. Gain 1D6 food and lose an equal number of HP. 3: You find some brambles. Gain 1 FOOD and lose 1 HP. 4: You find some berries. Gain 1 FOOD. 5: You find an abandoned vegetable garden. Gain 2 FOOD. 6: You find an apple tree. You shake it. Gain 1D6 food.</div>
+	<div id = "Fo-desc" style = 'display: none;'>Roll a D6: 1: You eat an unhealthy-looking mushroom. Robin loses 1 HP. 2: You find a swarm of bees. Gain 1D6 food and each outlaw at this location loses 1 HP. 3: You find some
+brambles. Gain 1 FOOD and Robin loses 1 HP. 4: You find some berries. Gain 1 FOOD. 5: You
+find an abandoned vegetable garden. Gain 2 FOOD. 6: You find an apple tree. You shake it.
+Gain 1D6 food.</div>
   </div>
   <div class='option'  id = "Action2" style='display: block; ' onclick="hide('Action2-desc');">Forest Hexes (1, 2, 6, 7, 8, 12, 13)</div>
   <div id = "Action2-desc" style = 'display: none;'>
@@ -248,7 +251,7 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
 	<div id = "Ma-desc" style = 'display: none;'>(Once per game). If Friar Tuck and Marian are present, you may marry Marian and Robin. Gain 20 FAME. On future turns, Marian must remain with Robin.
 </div>
 	<div class='o'  id = "Forest-Tr" onclick = "hide('Tr-desc');">Train</div>
-	<div id = "Tr-desc" style = 'display: none;'>If there are at least 2 outlaws at this location, you may give one of them +1 COMBAT and the other -2 HP.</div>
+	<div id = "Tr-desc" style = 'display: none;'>If there are at least 2 outlaws at this location, you may give one of them +1 COMBAT and the other -2 HP. You may not use this action to reduce an outlaw to 0 HP or below.</div>
 	<div class='o'  id = "Forest-Hi" onclick = "hide('Hi-desc');">Hide</div>
 	<div id = "Hi-desc" style = 'display: none;'>If you are pursued, make a SNEAK check. If you succeed, you are no longer pursued.
 </div>
@@ -293,11 +296,11 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
 	<div class='o'  id = "Ne-VC" onclick = "hide('VC-desc');">Visit the Clothier</div>
 	<div id = "VC-desc" style = 'display: none;'>You may pay 8 GOLD to equip Robin with a suit of Lincoln Green and gain 1 FAME. The suit allows your party to automatically pass all SNEAK checks in Forest locations, even if a 6 is rolled. Alternatively, you may pay 6 GOLD for a suit of armour. This grants +3 ARMOUR to a member of your party (remember, in Hot weather the armour bonus is cancelled).</div> 
 	<div class='o'  id = "Ne-Beg" onclick = "hide('Beg-desc');">Beg</div>
-	<div id = "Beg-desc" style = 'display: none;'>Gain +1 GOLD per outlaw present. Make a SNEAK check. If you fail, you are driven out of town. Each outlaw present loses 1 HP and your next action must be a move.</div> 
+	<div id = "Beg-desc" style = 'display: none;'>Gain +1 GOLD per outlaw present. Make a SNEAK check. If you fail, you are driven out of town. Each outlaw present loses 1 HP and your next action must be a move. Any outlaw who is reduced to 0 HP is moved to Nottingham Castle Dungeon.</div> 
 	<div class='o'  id = "Ne-BT" onclick = "hide('BT-desc');">Besiege the Town</div>
 	<div id = "BT-desc" style = 'display: none;'>If you have a catapult, you may attack the castle garrison (50 DM). If you defeat it, you may loot 100 GOLD. Gain +10 INF. You burn Newark to the ground. Your next action must be a move, and you may not return to this location for the rest of the game.</div> 
 	<div class='o'  id = "Ne-Deliver" onclick = "hide('Ne-Deliver-desc');">Deliver a Message</div>
-	<div id = "Ne-Deliver-desc" style = 'display: none;'>If you have a message to deliver, you may deliver it. Roll 1D6. 1: The message contains a lewd proposition. You are horsewhipped. Lose 3 HP. 2: You are rewarded with 1 GOLD for delivering the message. 3: A reply is drafted. You may choose to deliver the reply. If you do, roll for the destination: 1-3: Southwell 4-6: Nottingham and gain 2 GOLD as a delivery fee. 4: The recipient is very happy. Gain a BLESSING and your choice of reward: 2 FOOD or 2 BEER or 2 GOLD. 5: As a reward, the recipient whispers the password to Gisborne Castle to you.  6: The message turns out to be of vital importance! Gain 1 FAME for delivering it. You are also rewarded with a fine HORSE.</div> 
+	<div id = "Ne-Deliver-desc" style = 'display: none;'>If you have a message to deliver, you may deliver it. Roll 1D6. 1: The message contains a lewd proposition. You are horsewhipped. Robin loses 3 HP. 2: You are rewarded with 1 GOLD for delivering the message. 3: A reply is drafted. You may choose to deliver the reply. If you do, roll for the destination: 1-3: Southwell 4-6: Nottingham and gain 2 GOLD as a delivery fee. 4: The recipient is very happy. Gain a BLESSING and your choice of reward: 2 FOOD or 2 BEER or 2 GOLD. 5: As a reward, the recipient whispers the password to Gisborne Castle to you.  6: The message turns out to be of vital importance! Gain 1 FAME for delivering it. You are also rewarded with a fine HORSE.</div> 
 	<div class='o'  id = "Ne-VP" onclick = "hide('VP-desc');">Visit the Pawnbroker</div>
 	<div id = "VP-desc" style = 'display: none;'>You may sell any of the following for 2 GOLD each: RELIC, HORN, HORSE.</div> 	
   </div> 
@@ -322,7 +325,7 @@ If you defeat a party containing a catapult, add 20 to your party's COMBAT in fu
 	<div id = "HO-desc" style = 'display: none;'>If Friar Tuck and no other outlaws are at this location, you may renounce your criminal ways. Reduce your INF to 0. Lose 1 FAME per remaining HP Robin has. End the game.
 </div>
 	<div class='o'  id = "Ab-DisM" onclick = "hide('DisM-desc');">Disguise yourselves as Monks</div>
-	<div id = "DisM-desc" style = 'display: none;'>Make a SNEAK check. If successful, automatically pass your next SNEAK check, regardless of which outlaws are present. If unsuccessful, you are banished in shame. Your next action must be a move, and you may not return to this location for the rest of the game.</div>
+	<div id = "DisM-desc" style = 'display: none;'>Make a SNEAK check. If successful, automatically pass your next SNEAK check, regardless of which outlaws are present. If unsuccessful, you are banished in shame. Your next action must be a move to a Field or Forest location and you must give up all your RELCIS as a penance.</div>
   
   </div> 
       <div class='option'  id = "Action9" style='display: block; ' onclick="hide('Action9-desc');">Nunnery (26)</div>
@@ -364,9 +367,9 @@ according to your roll: 1-2: 1 day 3-4: 2 days 5: 3 days.</div>
 	<div class='o'  id = "No-Ra" onclick = "hide('Ra-desc');">Ransom the Sheriff</div>
 	<div id = "Ra-desc" style = 'display: none;'>If you have captured the Sheriff, you may ransom him. Demand a sum of GOLD. Roll 1D6 and keep adding the total until you have rolled a 1 thrice. If the total exceeds your demand, receive the sum of GOLD you demanded. Otherwise, you must keep the Sheriff.</div> 
 	<div class='o'  id = "No-DM" onclick = "hide('No-DM-desc');">Deliver a Message</div>
-	<div id = "No-DM-desc" style = 'display: none;'>If you have a message to deliver, you may deliver it. Roll 1D6. 1: The message contains a lewd proposition. You are horsewhipped. Lose 3 HP. 2: You are rewarded with 1 GOLD for delivering the message. 3: A reply is drafted. You may choose to deliver the reply. If you do, roll for the destination: 1-3: Southwell 4-6: Newark and gain 2 GOLD as a delivery fee. 4: The recipient takes you into their confidence. Do the following twice: roll 1D6 and save the result as a PLAN. 5: As a reward, the recipient whispers the password to Nottingham Castle to you.  6: The message turns out to be of vital importance! Gain 1 FAME for delivering it. You are also rewarded with a fine HORSE.</div> 
+	<div id = "No-DM-desc" style = 'display: none;'>If you have a message to deliver, you may deliver it. Roll 1D6. 1: The message contains a lewd proposition. You are horsewhipped. Robin loses 3 HP. 2: You are rewarded with 1 GOLD for delivering the message. 3: A reply is drafted. You may choose to deliver the reply. If you do, roll for the destination: 1-3: Southwell 4-6: Newark and gain 2 GOLD as a delivery fee. 4: The recipient takes you into their confidence. Do the following twice: roll 1D6 and save the result as a PLAN. 5: As a reward, the recipient whispers the password to Nottingham Castle to you.  6: The message turns out to be of vital importance! Gain 1 FAME for delivering it. You are also rewarded with a fine HORSE.</div> 
 	<div class='o'  id = "No-BH" onclick = "hide('BH-desc');">Break into a House</div>
-	<div id = "BH-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, gain 1D6 GOLD. If you fail and it is the first time you have failed this action, you are beaten. Gain 1 INF and lose 2 HP and all your GOLD. If you fail and you have failed this action before, you are punished by mutilation. Reduce Robin’s ARCHERY to 0.</div> 
+	<div id = "BH-desc" style = 'display: none;'>Make a SNEAK check. If you succeed, gain 1D6 GOLD. If you fail and it is the first time you have failed this action, you are beaten. Gain 1 INF and lose all your GOLD. If you fail and you have failed this action before, you are punished by mutilation. Reduce Robin’s ARCHERY to 0.</div> 
   </div> 
   <div class='option'  id = "Action12" style='display: block; ' onclick="hide('Action12-desc');">Gisborne Castle (30)</div>
   <div id = "Action12-desc" style = 'display: none;'>
